@@ -28,6 +28,11 @@ public class Room {
                 info += obj.getInfo() +"\n";
         }
 
+        info += "\nYou can go the other room in following direction(s): \n";
+        for (Character s: neighbors.keySet()){
+            info += s + " \n";
+        }
+
         return info;
     }
 

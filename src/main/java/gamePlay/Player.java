@@ -3,6 +3,8 @@ package gamePlay;
 import java.util.*;
 
 public class Player {
+    private String name;
+    private int hp = 100;
 
     private int BAG_SIZE = 6;
 
@@ -12,11 +14,21 @@ public class Player {
 
     public boolean isBusy = false;
 
-    private int row = 2;
-    private int col = 0;
+    private int row = 1;
+    private int col = 1;
     private int floor = 1;
 
-    private int hp = 100;
+    public Player(String name){
+        this.name = name;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public int getHp(){
+        return this.hp;
+    }
 
     public void setRow(int x){
         this.row = x;
@@ -28,6 +40,12 @@ public class Player {
 
     public void setFloor(int f){
         this.floor = f;
+    }
+
+    public Room getCurrentRoom(){
+        System.out.println("IN getCurrentRoom in Player");
+        System.out.println(floor+" "+row+" "+col);
+        return this.playerMap.tower.get(floor)[row][col];
     }
 
     private int hasHealPotion(){
@@ -46,9 +64,9 @@ public class Player {
         else {
             if (this.hp == 100) {
                 return 0;
-            } else if (this.hp == 95) {
+            } else if (this.hp > 90) {
                 potionsBags[itemSlot] = null;
-                this.hp += 5;
+                this.hp = 100;
                 return 1;
             } else {
                 potionsBags[itemSlot] = null;
@@ -63,11 +81,8 @@ public class Player {
         return currentRoom.canGo(dir);
     }
 
-    public Room getCurrentRoom(){
-        return this.playerMap.tower.get(floor)[row][col];
-    }
-
     public int move(String dir){
+        System.out.println("HI move" + dir);
         if(!isBusy){
             if(!getCurrentRoom().canProceed())
                 return -2;

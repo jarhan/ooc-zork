@@ -31,7 +31,12 @@ public class MoveCommand implements Command{
             }
             else {
                 System.out.println("Moving " + direction + "..........");
-                new SearchRoomCommand().apply(direction);
+                Command src = new SearchRoomCommand();
+                System.out.println("test1");
+                src.applyPlayer(player);
+                System.out.println("test2");
+                src.apply(direction);
+                System.out.println("After apply in move cmd");
             }
         }
 

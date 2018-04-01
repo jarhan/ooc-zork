@@ -44,7 +44,7 @@ public class Player {
 
     public Room getCurrentRoom(){
         System.out.println("IN getCurrentRoom in Player");
-        System.out.println(floor+" "+row+" "+col);
+        System.out.println("floor: "+floor+" row: "+row+" col: "+col);
         return this.playerMap.tower.get(floor)[row][col];
     }
 
@@ -84,10 +84,12 @@ public class Player {
     public int move(String dir){
         System.out.println("HI move" + dir);
         if(!isBusy){
+            System.out.println("in if isBusy in Player");
             if(!getCurrentRoom().canProceed())
                 return -2;
             dir = dir.toLowerCase();
             if(isRoomValidMove(dir)){
+                System.out.println("HI in isRoomValidMove in player");
 
                 if(dir.equals("w"))
                     this.row -= 1;
@@ -100,6 +102,7 @@ public class Player {
 
                 return 1;
             }
+            System.out.println("HI in out isRoomValidMove in player");
             return -1;
         }
         return 0;

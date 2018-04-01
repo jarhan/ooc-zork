@@ -5,9 +5,9 @@ import java.util.*;
 public class Room {
     private final static int MAX_ITEMS = 1;
     private final Potion[] potionLst = new Potion[MAX_ITEMS];
-    private final Map<Character,Room> neighbors = new HashMap<Character,Room>();
+    private final Map<String,Room> neighbors = new HashMap<String, Room>();
 
-    public boolean canGo(String dir){
+    public boolean canGo(String  dir){
         return neighbors.containsKey(dir);
     }
 
@@ -22,22 +22,25 @@ public class Room {
     }
 
     public String getInfo(){
-        String info = "In this room, you can find ";
+        String info = "In this room, you can find... ";
         for(Potion obj : potionLst){
-            if(obj!=null)
-                info += obj.getInfo() +"\n";
+            if(obj!=null) {
+                System.out.println("HI in getInfo in room");
+                System.out.println("obj:" + obj);
+                info += obj.getInfo() + "\n";
+            }
         }
 
         info += "\nYou can go the other room in following direction(s): \n";
-        for (Character s: neighbors.keySet()){
+        for (String s: neighbors.keySet()){
             info += s + " \n";
         }
 
         return info;
     }
 
-    public void setPath(Character direction,Room neighborRoom){
-        switch (direction) {
+    public void setPath(String direction,Room neighborRoom){
+        switch (direction.charAt(0)) {
             case 'w':
             case 'a':
             case 's':

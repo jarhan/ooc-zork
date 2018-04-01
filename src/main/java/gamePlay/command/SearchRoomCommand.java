@@ -17,7 +17,6 @@ public class SearchRoomCommand implements Command{
 
     @Override
     public void apply(String s) {
-        System.out.println(player.getName());
         Room room = player.getCurrentRoom();
         System.out.println(room.getInfo());
     }

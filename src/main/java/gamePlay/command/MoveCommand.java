@@ -1,15 +1,10 @@
 package gamePlay.command;
 
 import gamePlay.Player;
-import gamePlay.Room;
-//import gamePlay.ZorkGame;
 
 public class MoveCommand implements Command{
     private Player player;
 
-//    public MoveCommand(){
-////        this.player = player;
-//    }
     @Override
     public void applyPlayer(Player player){
         this.player = player;

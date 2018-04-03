@@ -16,31 +16,10 @@ public class ZorkGame {
             put("quit", new ExitCommand());
             put("attack", new AttackCommand());
             put("ans", new AnswerCommand());
-//            put();
-
-
-//            put("flee", new FleeCommand());
-//
-//            put("attack", new AttackCommand());
-//            put("rock",new RockCommand());
-//            put("paper",new PaperCommand());
-//            put("scissors",new ScissorCommand());
-//
-//
-//            put("use", new UsePotionCommand());
-//            put("position",new PositionCommand());
-//            put("take", new PickItemCommand());
-//            put("drop",new DropItemCommand());
-//            put("checkbag",new CheckBagCommand());
-//            put("checkhp",new CheckHPCommand());
-//            put("info",new LookAroundCommand());
-//            put("quit", new ExitCommand());
-//            put("help", new HelpCommand());
-//            put("combine", new CombineKeyCommand());
-
-//                put("useQuestItem", new UseItemCommand());
-
-
+            put("take", new PickUpCommand());
+            put("drop", new DropCommand());
+            put("use", new UseCommand());
+            put("help", new HelpCommand());
         }
     };
 
@@ -68,7 +47,9 @@ public class ZorkGame {
             Command command = null;
             try {
                 command = ZorkGame.getCommand(commandLine[0]);
-                command.applyPlayer(player);
+//                if (command != null) {
+//                    command.applyPlayer(player);
+//                }
             }
             catch (ArrayIndexOutOfBoundsException ai) {
             }
@@ -76,7 +57,7 @@ public class ZorkGame {
                 System.out.println("Unknown command try 'help'.");
             }
             else {
-//                System.out.println(commandLine.length);
+                command.applyPlayer(player);
                 if (commandLine.length < 2) {
                     command.apply("");
                 }

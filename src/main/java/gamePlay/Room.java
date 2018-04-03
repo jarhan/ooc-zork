@@ -20,6 +20,10 @@ public class Room {
         return this.boss;
     }
 
+    public Potion[] getItemList(){
+        return this.potionLst;
+    }
+
     public boolean addObj(Potion potion) {
         for(int i = 0; i < MAX_ITEMS;i++){
             if(potionLst[i] == null){
@@ -34,8 +38,8 @@ public class Room {
         String info = "In this room, you can find... ";
         for(Potion obj : potionLst){
             if(obj!=null) {
-                System.out.println("HI in getInfo in room");
-                System.out.println("obj:" + obj);
+//                System.out.println("HI in getInfo in room");
+//                System.out.println("obj:" + obj);
                 info += obj.getInfo() + "\n";
             }
         }

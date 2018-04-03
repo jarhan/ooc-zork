@@ -94,7 +94,7 @@ public class Player {
                 return 0;
             } else if (this.hp > (MAX_HP - 10)) {
                 potionsBags[itemSlot] = null;
-                this.hp = 100;
+                this.hp += 10;
                 return 1;
             } else {
                 potionsBags[itemSlot] = null;
@@ -110,6 +110,48 @@ public class Player {
 
     public boolean isDead() {
         return this.hp <= 0;
+    }
+
+    public int itemEmptySlot(){
+        for(int i = 0 ;i<6;i++){
+            if (potionsBags[i] == null){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    private int isValidCollect(String item){
+        Room currentRoom = this.playerMap.tower.get(floor)[row][col];
+        Potion[] allItem = currentRoom.getItemList();
+        for(int i = 0;i<allItem.length;i++){
+            Potion currentItem = allItem[i];
+            if(currentItem!=null && item.equals(currentItem.getName())){
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
+    public int collect(String item,int i){
+        int targetSlot = isValidCollect(item);
+        if (targetSlot > -1) {
+            Potion[] roomItem = getCurrentRoom().getItemList();
+            if (item.contains("potion")) {
+                potionsBags[i] = roomItem[targetSlot];
+                roomItem[targetSlot] = null;
+                return 1;
+            }
+        }
+        return -1;
+    }
+
+    public boolean dropItem(int i){
+        if(potionsBags[i]==null)
+            return false;
+        potionsBags[i] = null;
+        return true;
     }
 
     public boolean validAttack(){
@@ -129,34 +171,18 @@ public class Player {
         if(player.equals(computer))
             return 1;
         else return -1;
-
-//        if(player.equals("rock"))
-//            return (computer.equals("scissors") ? 1 : -1);
-//        if(player.equals("paper"))
-//            return (computer.equals("rock") ? 1 : -1);
-//        if(player.equals("scissors"))
-//            return (computer.equals("paper") ? 1 : -1);
-//
-//        //should not reach here
-//        return -2;
-
     }
+
     public void fight(){
-//        System.out.println("In fight: " + floor);
-//        System.out.println("In fight: " + this.floor);
         ArrayList<String[]> games = this.playerGame.bossFight.get(floor);
         ArrayList<String> ans = this.playerGame.bossAns.get(floor);
-//        this.playerGame.getGame(this.floor);
 
         if (this.isBusy){
-//            System.out.println("busy");
             if (this.floor == 1) {
                 System.out.println("  ABCDE");
                 for (int j = 0; j < games.get(this.game_n % 8).length; j++) {
                     System.out.println((j+1) + " " + games.get(this.game_n % 8)[j]);
                 }
-//                System.out.println("In fight " + ans_n);
-//                prv_ans = ans_n;
                 ans_n = ans.get(game_n%8);
             }
             else if (this.floor == 2) {
@@ -164,8 +190,6 @@ public class Player {
                 for (int j = 0; j < games.get(this.game_n % 8).length; j++) {
                     System.out.println((j+1) + " " + games.get(this.game_n % 8)[j]);
                 }
-//                System.out.println("In fight " + ans_n);
-//                prv_ans = ans_n;
                 ans_n = ans.get(game_n%8);
             }
             else if (this.floor == 3) {
@@ -178,20 +202,10 @@ public class Player {
                         System.out.println((j + 1) + " " + games.get(this.game_n % 5)[j]);
                     }
                 }
-//                System.out.println("In fight " + ans_n);
-//                prv_ans = ans_n;
                 ans_n = ans.get(game_n%5);
             }
             game_n++;
         }
-//        System.out.println(games.get(0));
-//        for (int i = 0; i < games.size(); i++) {
-//            System.out.println("  ABCDE");
-//            for (int j = 0; j < games.get(i).length; j++) {
-//                System.out.println((j+1) + " " + games.get(i)[j]);
-//            }
-//            System.out.println(ans.get(i));
-//        }
     }
 
     public int attackWith(String choice){

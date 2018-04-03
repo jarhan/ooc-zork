@@ -13,7 +13,9 @@ public class ZorkGame {
             // commands are added here using lambdas. It is also possible to dynamically add commands without editing the code.
             put("move", new MoveCommand());
             put("info", new SearchRoomCommand());
-            put("exit", new ExitCommand());
+            put("quit", new ExitCommand());
+            put("attack", new AttackCommand());
+            put("ans", new AnswerCommand());
 //            put();
 
 
@@ -56,7 +58,8 @@ public class ZorkGame {
         System.out.print("Create your name within one word: ");
         String[] playerName = scanner.nextLine().split("\\s+");
         player = new Player(playerName[0]);
-        System.out.println("OK, I got it. Your name is " + player.getName() + " and now your HP is " + player.getHp());
+        System.out.println("OK, I got it. Your name is " + player.getName() + " and now your HP is " + player.getHp() +
+                            " and your Attack power(AP) is " + player.getAp());
 
         while (!quit) {
             System.out.print("You: ");

@@ -1,0 +1,27 @@
+package gamePlay.command;
+
+import gamePlay.Player;
+import gamePlay.ZorkGame;
+
+public class AttackCommand implements Command {
+    private Player player;
+
+    @Override
+    public void applyPlayer(Player player){
+        this.player = player;
+    }
+
+    @Override
+    public void apply(String s) {
+        if(player.validAttack()){
+            System.out.println("Engage in fight");
+            player.fight();
+        }
+        else {
+            System.out.println("There is no guardian in this room.");
+        }
+
+    }
+
+
+}

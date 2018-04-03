@@ -3,7 +3,7 @@ package gamePlay.command;
 import gamePlay.Player;
 import gamePlay.Room;
 
-public class SearchRoomCommand implements Command{
+public class SearchRoomCommand implements Command {
     Player player;
 
     @Override
@@ -18,6 +18,7 @@ public class SearchRoomCommand implements Command{
     @Override
     public void apply(String s) {
         Room room = player.getCurrentRoom();
+        System.out.println("You status now is HP: " + player.getHp() + " AP: " + player.getAp());
         System.out.println(room.getInfo());
     }
 }

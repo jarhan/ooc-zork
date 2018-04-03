@@ -6,9 +6,18 @@ public class Room {
     private final static int MAX_ITEMS = 1;
     private final Potion[] potionLst = new Potion[MAX_ITEMS];
     private final Map<String,Room> neighbors = new HashMap<String, Room>();
+    private BigBoss boss = null;
 
     public boolean canGo(String  dir){
         return neighbors.containsKey(dir);
+    }
+
+    public void setBoss(BigBoss boss){
+        this.boss = boss;
+    }
+
+    public BigBoss getBoss(){
+        return this.boss;
     }
 
     public boolean addObj(Potion potion) {
@@ -30,12 +39,14 @@ public class Room {
                 info += obj.getInfo() + "\n";
             }
         }
-
+        if(this.boss != null) {
+            info += "\n======================================= \n";
+            info += "\nHas guardian: " + getBoss().getInfo()+"\n";
+        }
         info += "\nYou can go the other room in following direction(s): \n";
         for (String s: neighbors.keySet()){
             info += s + " \n";
         }
-
         return info;
     }
 

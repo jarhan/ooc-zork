@@ -14,6 +14,7 @@ public class GenerateMap {
         Room room02 = new Room();
 
         Room room10 = new Room();
+        room10.setBoss(new BigBoss("Piyapat",40));
 
         Room room11 = new Room();
 
@@ -69,6 +70,54 @@ public class GenerateMap {
         floor[2][0] = room20;
         floor[2][1] = room21;
         floor[2][2] = room22;
+
+        return floor;
+    }
+
+    public Room[][] generateSecondFloor(){
+
+        Room[][] floor = new Room[2][2];
+
+        Room room00 = new Room();
+        room00.addObj(new Potion("heal"));
+
+        Room room01 = new Room();
+        room01.setBoss(new BigBoss("Payut",70));
+
+        Room room10 = new Room();
+
+        Room room11 = new Room();
+
+        room00.setPath("d", room01);
+        room00.setPath("s", room10);
+
+        room01.setPath("a", room00);
+        room01.setPath("s", room11);
+
+        room10.setPath("w", room00);
+        room10.setPath("d", room11);
+
+        room11.setPath("w", room01);
+        room11.setPath("a", room10);
+
+
+
+        floor[0][0] = room00;
+        floor[0][1] = room01;
+        floor[1][0] = room10;
+        floor[1][1] = room11;
+
+        return floor;
+    }
+
+    public Room[][] generateThirdFloor(){
+
+        Room[][] floor = new Room[1][1];
+
+        Room room00 = new Room();
+        room00.setBoss(new BigBoss("Pongwasin",100));
+
+        floor[0][0] = room00;
 
         return floor;
     }

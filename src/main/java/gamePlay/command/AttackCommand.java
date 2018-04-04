@@ -13,7 +13,6 @@ public class AttackCommand implements Command {
 
     @Override
     public void apply(String s) {
-        System.out.println(player.isBusy);
         if(player.validAttack()){
             System.out.println("Engage in fight");
             player.fight();

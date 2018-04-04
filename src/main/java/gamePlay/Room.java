@@ -45,7 +45,7 @@ public class Room {
         }
         if(this.boss != null) {
             info += "\n======================================= \n";
-            info += "\nHas guardian: " + getBoss().getInfo()+"\n";
+            info += "\nHas Boss: " + getBoss().getInfo()+"\n";
         }
         info += "\nYou can go the other room in following direction(s): \n";
         for (String s: neighbors.keySet()){

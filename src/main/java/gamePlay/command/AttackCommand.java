@@ -13,12 +13,13 @@ public class AttackCommand implements Command {
 
     @Override
     public void apply(String s) {
+        System.out.println(player.isBusy);
         if(player.validAttack()){
             System.out.println("Engage in fight");
             player.fight();
         }
         else {
-            System.out.println("There is no guardian in this room.");
+            System.out.println("There is no Boss in this room.");
         }
 
     }

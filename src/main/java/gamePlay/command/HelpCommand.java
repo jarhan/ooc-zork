@@ -19,7 +19,7 @@ public class HelpCommand implements Command {
         System.out.println("take {item}     to pick up items, potion includes 'healingpotion',can store atmost 6 items, \n" +
                            "                but in the game there are only 3 potion \uD83D\uDE02");
         System.out.println("use {potion}    use potion. potion includes 'healingpotion'");
-        System.out.println("attack          engage in battle if there is the guardian in the room");
+        System.out.println("attack          engage in battle if there is the boss in the room");
         System.out.println("ans {xxx}       find the difference character in the board the Boss in each room gives eg. A8, H12, or J4");
         System.out.println("drop {i}        drop item in the i'th slot");
 //        System.out.println("position => check the current postion of the character");

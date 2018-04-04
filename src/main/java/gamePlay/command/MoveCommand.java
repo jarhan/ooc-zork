@@ -22,18 +22,18 @@ public class MoveCommand implements Command{
                 System.out.println("You can't move that way!");
             }
             else if(status==-2){
-                System.out.println("You have to defeat the guardian first");
+                System.out.println("You have to defeat the boss first");
             }
             else {
                 System.out.println("Moving " + direction + "..........");
                 Command src = new SearchRoomCommand();
                 player.increaseMAX_HP();
                 player.increaseHp();
-                System.out.println("test1");
+//                System.out.println("test1");
                 src.applyPlayer(player);
-                System.out.println("test2");
+//                System.out.println("test2");
                 src.apply(direction);
-                System.out.println("After apply in move cmd");
+//                System.out.println("After apply in move cmd");
             }
         }
 

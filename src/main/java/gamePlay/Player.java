@@ -157,10 +157,10 @@ public class Player {
     public boolean validAttack(){
         Room currentRoom = this.playerMap.tower.get(floor)[row][col];
 
-        BigBoss currentGuardian = currentRoom.getBoss();
+        BigBoss currentBoss = currentRoom.getBoss();
 
-        if(currentGuardian!=null){
-            this.target = currentGuardian;
+        if(currentBoss!=null){
+            this.target = currentBoss;
             this.isBusy = true;
             return true;
         }
@@ -280,7 +280,7 @@ public class Player {
 
                 return 1;
             }
-            System.out.println("HI in out isRoomValidMove in player");
+//            System.out.println("HI in out isRoomValidMove in player");
             return -1;
         }
         return 0;

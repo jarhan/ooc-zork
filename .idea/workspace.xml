@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8b2c76f-13bc-4942-862c-2fb963347168" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/gamePlay/command/DropCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/gamePlay/command/HelpCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/gamePlay/command/PickUpCommand.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/gamePlay/command/UseCommand.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/gamePlay/Player.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/gamePlay/Room.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/gamePlay/ZorkGame$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/gamePlay/ZorkGame.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/gamePlay/command/MoveCommand.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gamePlay/Player.java" afterPath="$PROJECT_DIR$/src/main/java/gamePlay/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gamePlay/Room.java" afterPath="$PROJECT_DIR$/src/main/java/gamePlay/Room.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gamePlay/ZorkGame.java" afterPath="$PROJECT_DIR$/src/main/java/gamePlay/ZorkGame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gamePlay/command/MoveCommand.java" afterPath="$PROJECT_DIR$/src/main/java/gamePlay/command/MoveCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gamePlay/command/HelpCommand.java" afterPath="$PROJECT_DIR$/src/main/java/gamePlay/command/HelpCommand.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,11 +24,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ZorkGame.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ZorkGame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/gamePlay/ZorkGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+            <state relative-caret-position="248">
+              <caret line="48" column="62" lean-forward="false" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -61,8 +49,8 @@
       <file leaf-file-name="HelpCommand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/gamePlay/command/HelpCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state relative-caret-position="251">
+              <caret line="27" column="44" lean-forward="false" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -78,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GenerateMap.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GenerateMap.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/gamePlay/GenerateMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="758">
-              <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+            <state relative-caret-position="-912">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -140,7 +128,7 @@
       <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/gamePlay/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="1575">
               <caret line="121" column="5" lean-forward="false" selection-start-line="121" selection-start-column="5" selection-end-line="121" selection-end-column="5" />
               <folding>
                 <element signature="e#2392#2393#0" expanded="true" />
@@ -163,7 +151,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>hp</find>
       <find>room</find>
       <find>obj:</find>
       <find>info</find>
@@ -193,6 +180,7 @@
       <find>fight</find>
       <find>prv_ans</find>
       <find>getItemList</find>
+      <find>You:</find>
     </findStrings>
     <replaceStrings>
       <replace>&quot;d&quot;</replace>
@@ -228,7 +216,6 @@
         <option value="$PROJECT_DIR$/src/main/java/gamePlay/command/AttackWith.java" />
         <option value="$PROJECT_DIR$/src/main/java/gamePlay/command/SearchRoomCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/gamePlay/command/AnswerCommand.java" />
-        <option value="$PROJECT_DIR$/src/main/java/gamePlay/ZorkGame.java" />
         <option value="$PROJECT_DIR$/src/main/java/gamePlay/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/gamePlay/Potion.java" />
         <option value="$PROJECT_DIR$/src/main/java/gamePlay/Tower.java" />
@@ -239,6 +226,7 @@
         <option value="$PROJECT_DIR$/src/main/java/gamePlay/BigBoss.java" />
         <option value="$PROJECT_DIR$/src/main/java/gamePlay/command/MoveCommand.java" />
         <option value="$PROJECT_DIR$/src/main/java/gamePlay/command/HelpCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gamePlay/ZorkGame.java" />
       </list>
     </option>
   </component>
@@ -569,7 +557,7 @@
         <state relative-caret-position="120">
           <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="11" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -621,7 +609,7 @@
         <state relative-caret-position="341">
           <caret line="48" column="63" lean-forward="false" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -688,8 +676,8 @@
         <state relative-caret-position="434">
           <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
           <folding>
-            <element signature="e#533#534#0" expanded="true" />
-            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#533#534#0" expanded="false" />
+            <element signature="e#570#571#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -739,8 +727,8 @@
         <state relative-caret-position="165">
           <caret line="11" column="37" lean-forward="true" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
           <folding>
-            <element signature="e#533#534#0" expanded="true" />
-            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#533#534#0" expanded="false" />
+            <element signature="e#570#571#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -782,6 +770,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="179">
           <caret line="428" column="0" lean-forward="false" selection-start-line="428" selection-start-column="0" selection-end-line="428" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -814,7 +803,7 @@
         <state relative-caret-position="363">
           <caret line="48" column="63" lean-forward="false" selection-start-line="48" selection-start-column="63" selection-end-line="48" selection-end-column="63" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -824,7 +813,7 @@
         <state relative-caret-position="120">
           <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="11" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -884,21 +873,8 @@
         <state relative-caret-position="483">
           <caret line="52" column="9" lean-forward="false" selection-start-line="52" selection-start-column="9" selection-end-line="52" selection-end-column="9" />
           <folding>
-            <element signature="e#533#534#0" expanded="true" />
-            <element signature="e#570#571#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gamePlay/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="121" column="5" lean-forward="false" selection-start-line="121" selection-start-column="5" selection-end-line="121" selection-end-column="5" />
-          <folding>
-            <element signature="e#2392#2393#0" expanded="true" />
-            <element signature="e#2425#2426#0" expanded="true" />
-            <element signature="e#2456#2457#0" expanded="true" />
-            <element signature="e#2491#2492#0" expanded="true" />
+            <element signature="e#533#534#0" expanded="false" />
+            <element signature="e#570#571#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -944,24 +920,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gamePlay/command/HelpCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gamePlay/ZorkGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gamePlay/command/PickUpCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -980,9 +938,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gamePlay/GenerateMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="758">
-          <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+        <state relative-caret-position="-912">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gamePlay/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1575">
+          <caret line="121" column="5" lean-forward="false" selection-start-line="121" selection-start-column="5" selection-end-line="121" selection-end-column="5" />
+          <folding>
+            <element signature="e#2392#2393#0" expanded="true" />
+            <element signature="e#2425#2426#0" expanded="true" />
+            <element signature="e#2456#2457#0" expanded="true" />
+            <element signature="e#2491#2492#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gamePlay/command/HelpCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="27" column="44" lean-forward="false" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gamePlay/ZorkGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="48" column="62" lean-forward="false" selection-start-line="48" selection-start-column="62" selection-end-line="48" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

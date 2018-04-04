@@ -41,15 +41,12 @@ public class ZorkGame {
                             " and your Attack power(AP) is " + player.getAp());
 
         while (!quit) {
-            System.out.print("You: ");
+            System.out.print(player.getName() + ": ");
             String[] commandLine = scanner.nextLine().split("\\s+");
 
             Command command = null;
             try {
                 command = ZorkGame.getCommand(commandLine[0]);
-//                if (command != null) {
-//                    command.applyPlayer(player);
-//                }
             }
             catch (ArrayIndexOutOfBoundsException ai) {
             }
